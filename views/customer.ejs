@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer List - Aayush Bank</title>
+    <link rel="stylesheet" href="/assets/style.css"> <!-- Include your custom stylesheet here -->
+    <style>
+        /* Add your background wallpaper styling here */
+        body {
+            background-image: url('/assets/white.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        /* Remove extra space between navigation bar and table */
+        section#customer {
+            padding-top: 1px; /* Adjust as needed */
+        }
+        
+        /* Style for table header cells */
+        table th {
+            color: white;
+            font-weight: bold;
+        }
+        
+        /* Style for table data cells */
+        table td {
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <%- include('header'); -%>
+    
+    <section id="customer" style="margin-top: -75px;">
+        <div class="customerTable table-responsive-sm">
+            <table class="table table-striped table-hover text-center">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Current Balance</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% newData.forEach(function(item){ %>
+                        <tr>
+                            <td><%= item.name %></td>
+                            <td><%= item.emailId %></td>
+                            <td><%= item.currentbalance %></td>
+                            <td>
+                                <a href="/customer/<%=item.name%>">
+                                    <button class="btn btn-danger" type="button" style="background-color: transparent; color: white; border: 2px solid white;">Details</button>
+                                </a>
+                            </td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+    <%- include('footer'); -%>
+</body>
+</html>

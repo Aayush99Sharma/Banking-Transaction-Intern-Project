@@ -1,0 +1,64 @@
+
+<%- include ('header'); -%>
+<% var imagePath = '/assets/white.jpg'; %>
+ <section id="body" style="background-image: url('/assets/white.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; text-align: center;margin-top: -100px;">
+    <h3 style="color: white; font-weight: bold;margin-top: 100px; text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-weight: bold;">
+        <br>
+        <br>
+        <%=name%>'s Account
+    </h3>
+    <div class="table-container" style="display: flex; justify-content: center;">
+        
+        <table class="table table-striped my-4 text-center" style="width: 80%;">
+            <thead>
+                <tr>
+                    <th style="color: white; font-weight: bold;">Name</th>
+                    <th style="color: white; font-weight: bold;">Email</th>
+                    <th style="color: white; font-weight: bold;">Current Balance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="color: white; font-weight: bold;"><%= name %></td>
+                    <td style="color: white; font-weight: bold;"><%= emailId %></td>
+                    <td style="color: white; font-weight: bold;"><%= currentbalance %></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section id="transfer" style="background-image: url('/assets/white.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; text-align: center; padding: 20px 0;">
+    <div class="form">
+         <h2 style="color: white; font-weight: bold;font-size: 20px;text-align: center;">Transfer Money</h2>
+        <form id="transferform" action="#" method="POST" style="font-weight: bold;">
+            <table style="margin: 0 auto; border: 2px solid grey; width: 45vw; box-shadow: 4px 4px 4px grey;">
+                <tr>
+                    <td style="color: white; font-weight: bold;">Transfer To:</td>
+                    <td >
+                        <select name="actholder" >
+                            <% newdata.forEach(function(item){%>
+                                <option >
+                                    <%= item.name %>
+                                </option>
+                            <% }); %>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: white; font-weight: bold;">Amount to be transferred:</td>
+                    <td><input type="number" name="inputvalue" placeholder="amount in rupees" required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button class="btn btn-danger" type="submit">Transfer</button></td>
+                </tr>
+            </table>
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</section>
+<%- include ('footer'); -%>

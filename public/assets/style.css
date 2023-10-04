@@ -1,0 +1,120 @@
+/* Reset default margin and padding */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Header styles */
+h1 {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+    font-weight: bold; /* Added font-weight */
+}
+
+/* Title styles */
+.title {
+    position: relative;
+    top: 30vh;
+    left: 10vw;
+    padding: 30px;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+    font-weight: bold; /* Added font-weight */
+}
+
+/* Image styles */
+.tick {
+    height: 300px;
+    display: block;
+    margin: 30vh auto 0 auto;
+}
+
+/* Success message styles */
+#success {
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+    font-weight: bold; /* Added font-weight */
+}
+
+/* Details text styles */
+.details {
+    font-size: 1rem;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000; /* Adjusted text-shadow */
+}
+
+/* Customer section styles */
+/* Customer section styles */
+#customer {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    padding: 20px; /* Adding some padding for spacing */
+}
+
+/* Data within the customer section */
+#customer h2 {
+    color: #fff; /* Set text color to white */
+    font-weight: bold; /* Make the text bold */
+    text-shadow: 2px 2px 2px rgba(234, 10, 10, 0.5); /* Add text shadow with transparency */
+    font-size: 1.5rem; /* Adjust font size as needed */
+    margin-bottom: 10px; /* Add some spacing below the heading */
+}
+
+#customer p {
+    color: #fff; /* Set text color to white */
+    font-weight: bold; /* Make the text bold */
+    text-shadow: 1px 1px 1px rgba(226, 7, 7, 0.5); /* Add text shadow with transparency */
+    font-size: 1rem; /* Adjust font size as needed */
+    line-height: 1.5; /* Improve line spacing for readability */
+    margin-bottom: 20px; /* Add spacing between paragraphs */
+}
+
+
+/* Table styles */
+.table {
+    margin: 80px 0 20px 0;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Navbar links styles */
+.navbar a {
+    color: #fff;
+    padding: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold; /* Added font-weight */
+}
+
+/* Navbar brand styles */
+.navbar-brand {
+    font-size: 28px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold; /* Added font-weight */
+}
+
+/* Navbar link hover styles */
+.navbar a:hover {
+    background-color: red;
+    color: #fff;
+}

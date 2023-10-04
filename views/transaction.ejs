@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer List - Aayush Bank</title>
+    <link rel="stylesheet" href="/assets/style.css"> <!-- Include your custom stylesheet here -->
+    <style>
+        /* Add your background wallpaper styling here */
+        body {
+            background-image: url('/assets/white.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        /* Remove extra space between navigation bar and table */
+        section#customer {
+            padding-top: 1px; /* Adjust as needed */
+        }
+    </style>
+</head>
+
+<%- include ('header'); -%>
+<section id="customer" style="margin-top: -75px;">
+    <div class="customerTable table-responsive-sm">
+        <table class="table table-striped text-center table-hover">
+            <thead>
+                <tr>
+                    <th style="color: white;">From</th>
+                    <th style="color: white;">To</th>
+                    <th style="color: white;">Amount</th>
+                    <th style="color: white;">Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% newData.forEach(function(item){ %>
+                    <tr>
+                        <td style="color: white;"><%= item.from %></td>
+                        <td style="color: white;"><%= item.to %></td>
+                        <td style="color: white;"><%= item.amount %></td>
+                        <td style="color: white;"><%= item.ts %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</section>
+<%- include ('footer'); -%>
