@@ -7,7 +7,7 @@ const _ = require("lodash");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 const mongoose = require("mongoose");
-mongoose.connect("mongodb+srv://Ayyush69:Mega8276Mind@@cluster0.vloon3m.mongodb.net/basicbankDB", { useNewUrlParser: true }, { useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://@cluster0.vloon3m.mongodb.net/basicbankDB", { useNewUrlParser: true }, { useUnifiedTopology: true });
 
 //Schema 
 const dataSchema = new mongoose.Schema({
