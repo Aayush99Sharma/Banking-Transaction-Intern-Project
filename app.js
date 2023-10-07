@@ -7,6 +7,7 @@ const _ = require("lodash");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 const mongoose = require("mongoose");
+
 mongoose.connect("mongodb+srv://aashu123:IpqI6cwvONcH3Axz@aayushfinance.odq1jqp.mongodb.net/aayushfinance", { useNewUrlParser: true }, { useUnifiedTopology: true });
 
 //Schema 
