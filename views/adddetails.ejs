@@ -1,0 +1,51 @@
+<%- include ('header'); -%>
+
+<section id="body" style="background-image: url('/assets/white.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; text-align: center; margin-top: -100px;">
+    <h3 style="color: white; font-weight: bold; margin-top: 100px; text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-weight: bold;">
+        <br>
+        <br>
+        Add Customer Details
+    </h3>
+    <div class="table-container" style="display: flex; justify-content: center;">
+        <form id="customerform" action="/adddetails" method="POST" style="font-weight: bold;">
+            <table class="table table-striped my-4 text-center" style="width: 80%;">
+                <thead>
+                    <tr>
+                        <th style="color: white; font-weight: bold;">Name</th>
+                        <th style="color: white; font-weight: bold;">Email</th>
+                        <th style="color: white; font-weight: bold;">Current Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="color: white; font-weight: bold;">
+                            <input type="text" id="name" name="name" placeholder="Name" required>
+                        </td>
+                        <td style="color: white; font-weight: bold;">
+                            <input type="email" id="emailId" name="emailId" placeholder="Email" required>
+                        </td>
+                        <td style="color: white; font-weight: bold;">
+                            <input type="number" id="currentbalance" name="currentbalance" placeholder="Current Balance" required>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-primary" type="submit">Add Customer</button>
+        </form>
+       
+    </div>
+        <Br>
+        <Br>
+        <Br>
+        <Br>       
+        <Br>    
+        <Br>
+        <Br>
+        <Br>
+        <Br>
+        <Br> 
+        <Br>
+        <Br>     
+</section>
+
+<%- include ('footer'); -%>

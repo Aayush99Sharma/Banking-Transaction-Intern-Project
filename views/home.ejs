@@ -12,6 +12,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
+    <script src="file:///C:/Users/HP/Desktop/Basic-Banking-System-main/index.js"></script>
+
 </head>
 <body>
     <!-- Header and Navigation -->
@@ -21,15 +24,21 @@
                 <li style="display: inline-block; margin-right: 20px;"><a href="/" style="text-decoration: none; color: #fff;">Home</a></li>
                 <li style="display: inline-block; margin-right: 20px;"><a href="#about" style="text-decoration: none; color: #fff;">About Us</a></li>
                 <li style="display: inline-block; margin-right: 20px;"><a href="#services" style="text-decoration: none; color: #fff;">Services</a></li>
-                <li style="display: inline-block; margin-right: 20px;"><a href="#contact" style="text-decoration: none; color: #fff;">Contact</a></li>
                 <li style="display: inline-block; margin-right: 20px;"><a href="/customer" style="text-decoration: none; color: #fff;">View all Customers</a></li>
-                <li style="display: inline-block;"><a href="/transaction" style="text-decoration: none; color: #fff;">Transaction History</a></li>
+                <li style="display: inline-block; margin-right: 20px"><a href="/transaction" style="text-decoration: none; color: #fff;">Transaction History</a></li>
+                <li style="display: inline-block; margin-right: 20px;"><a href="/adddetails" style="text-decoration: none; color: #fff;">Add Customer Data</a></li>
+                <li style="display: inline-block; margin-right: 20px;"><a href="#contact" style="text-decoration: none; color: #fff;">Contact</a></li>
+
+                
+                
+
+                
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <% var imagePath = '/assets/bank1.jpg'; %>
+    <% var imagePath = '/assets/bank9.jpg'; %>
     <section id="body" style="background-image: url('/assets/white.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; text-align: center; padding: 20px 0;">
         <div class="container">
             <div class="row">
@@ -41,7 +50,8 @@
                     <h1 style="font-size: 2.5rem; color: #fff;">Welcome to Aayush Bank</h1>
                     <p style="font-size: 1.5rem; color: #fff;">
                         <br>
-                        Aayush Bank is a trusted financial institution committed to simplifying your banking experience. With a range of personal and business banking solutions, we empower individuals and enterprises to manage their finances effortlessly. Discover a partner you can rely on at Aayush Bank.</p>
+                        A trusted financial institution, Aayush Bank, is dedicated to streamlining your financial experience. Offering a variety of personal and business financial solutions, we empower individuals and enterprises to effortlessly manage their finances. Discover a reliable partner in Aayush Bank, created by Aayush Sharma, for all your financial needs.
+                     <br>
                      <br>
                         <a href="#services" class="cta-button" style="background-color: #007bff; color: #fff; padding: 5px 20px; text-decoration: none; border-radius: 5px;">Explore Our Services</a>
                 </div>
@@ -66,20 +76,29 @@
                 <h2 style="font-size: 2rem; color: #333;">Our Services</h2>
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="service" style="margin-top: 20px;">
-                            <% var imagePath = '/assets/location.png'; %>
-                            <img src="<%= imagePath %>" alt="Service 1" style="width: 80px; height: 80px; margin: 0 auto;">
-                            <h3 style="font-size: 1.5rem; color: #007bff; margin-top: 10px;">Personal Banking</h3>
-                            <p style="font-size: 1rem; color: #555;">Manage your finances with ease through our personal banking solutions.</p>
-                        </div>
+                        <a href="https://en.wikipedia.org/wiki/Private_banking">
+                            <div class="service" style="margin-top: 20px;">
+                                <% var imagePath = '/assets/location.png'; %>
+                                <img src="<%= imagePath %>" alt="Service 1" style="width: 80px; height: 80px; margin: 0 auto;">
+                                <h3 style="font-size: 1.5rem; color: #007bff; margin-top: 10px;">
+                                    <a href="https://en.wikipedia.org/wiki/Private_banking" style="text-decoration: none !important;">Private Banking</a>
+                                </h3>
+                                <p style="font-size: 1rem; color: #555;">Manage your finances with ease through our private banking solutions.</p>
+                            </div>
+                        </a>
                     </div>
+                    
                     <div class="col-md-6">
+                      <a href="https://www.investopedia.com/terms/b/business-banking.asp">
                         <div class="service" style="margin-top: 20px;">
                             <% var imagePath = '/assets/location.png'; %>
                             <img src="<%= imagePath %>" alt="Service 2" style="width: 80px; height: 80px; margin: 0 auto;">
-                            <h3 style="font-size: 1.5rem; color: #e85a4f; margin-top: 10px;">Business Banking</h3>
+                            <h3 style="font-size: 1.5rem; color: #e85a4f; margin-top: 10px;">
+                                <a href="https://www.investopedia.com/terms/b/business-banking.asp" style="text-decoration: none !important;">Business Banking</a>
+                            </h3>
                             <p style="font-size: 1rem; color: #555;">Empower your business with our comprehensive range of banking services.</p>
                         </div>
+                       </a>
                     </div>
                 </div>
             </div>

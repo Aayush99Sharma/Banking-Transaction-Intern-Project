@@ -58,7 +58,7 @@ h1 {
 /* Customer section styles */
 #customer {
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+   
     padding: 20px; /* Adding some padding for spacing */
 }
 
@@ -83,7 +83,7 @@ h1 {
 
 /* Table styles */
 .table {
-    margin: 80px 0 20px 0;
+    margin: 0;
 }
 
 /* Navbar styles */
