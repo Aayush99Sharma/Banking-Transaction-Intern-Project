@@ -4,11 +4,13 @@
     <h3 style="color: white; font-weight: bold; margin-top: 100px; text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-weight: bold;">
         <br>
         <br>
+        <br>
         Add Customer Details
     </h3>
+
     <div class="table-container" style="display: flex; justify-content: center;">
         <form id="customerform" action="/adddetails" method="POST" style="font-weight: bold;">
-            <table class="table table-striped my-4 text-center" style="width: 80%;">
+            <table class="table table-striped my-4 text-center" style="width: 100%; max-width: 600px;">
                 <thead>
                     <tr>
                         <th style="color: white; font-weight: bold;">Name</th>
@@ -30,22 +32,53 @@
                     </tr>
                 </tbody>
             </table>
-            <button class="btn btn-primary" type="submit">Add Customer</button>
+            <button class="btn btn-primary" type="submit" style="width: 30%;">Add Customer</button>
         </form>
-       
     </div>
-        <Br>
-        <Br>
-        <Br>
-        <Br>       
-        <Br>    
-        <Br>
-        <Br>
-        <Br>
-        <Br>
-        <Br> 
-        <Br>
-        <Br>     
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Media Queries for Mobile Responsiveness -->
+    <style>
+        @media (max-width: 768px) {
+            #body {
+                padding-top: 20px; /* Add some top padding for smaller screens */
+            }
+
+            h3 {
+                font-size: 1.5rem; /* Reduce font size for smaller screens */
+            }
+
+            .table-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            table {
+                width: 80%; /* Adjust table width for smaller screens */
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="number"] {
+                width: 100%; /* Make input fields full width on smaller screens */
+                margin-bottom: 10px; /* Add spacing between input fields */
+            }
+
+            button {
+                width: 100%; /* Make the button full width on smaller screens */
+            }
+        }
+    </style>
 </section>
 
 <%- include ('footer'); -%>
