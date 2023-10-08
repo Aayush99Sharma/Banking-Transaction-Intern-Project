@@ -8,7 +8,56 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 const mongoose = require("mongoose");
 
+
 mongoose.connect("mongodb+srv://aashu123:IpqI6cwvONcH3Axz@aayushfinance.odq1jqp.mongodb.net/aayushfinance", { useNewUrlParser: true }, { useUnifiedTopology: true });
+
+
+
+
+
+
+
+const path = require('path');
+
+
+// ...
+
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Define a route to serve the index.html file
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Define a route to serve the index.html file
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index1.html'));
+});
+
+// ...
+
+let Cport = process.env.PORT || 4000; // Use 4000 as the default port
+app.listen(Cport, function () {
+    console.log(`Server is running on port ${port}`);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Schema 
 const dataSchema = new mongoose.Schema({
@@ -193,6 +242,48 @@ app.get("/transaction", function (req, res) {
 
     });
 });
+
+
+
+
+// Route to add new customer data
+app.get("/adddetails", function (req, res) {
+    res.render("adddetails");
+});
+
+app.post("/adddetails", function (req, res) {
+    // Handle adding new customer data here
+    // You can access the form data from req.body
+    const { name, emailId, currentbalance } = req.body;
+
+    // Create a new Data object with the provided data
+    const newData = new Data({
+        name: name,
+        emailId: emailId,
+        currentbalance: currentbalance
+    });
+
+    // Save the new data to the database
+    newData.save(function (err) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log("New customer data added successfully");
+            res.redirect("/customer"); // Redirect to the customer page after adding data
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
 let port = process.env.PORT;
 if (port == null || port =="")
 {

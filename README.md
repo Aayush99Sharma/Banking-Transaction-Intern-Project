@@ -15,11 +15,15 @@
   between multiple users.
 * Host the website at 000webhost, github.io, heroku app or any
   other free hosting provider. Check in code in gitlab.
+  
 ## Tools Used :  
 ###  Frontend : Ejs Templates, CSS ,Javascript,Bootstrap
 ###  Backend : Express 
 ###  Database : Mongodb
-###  Hosted on : Heroku App
+###  Hosted on : render
+###  Link : https://aayush-sharma-finance.onrender.com
+
+
 
 =======
 # Banking-Transaction-Intern-Project
