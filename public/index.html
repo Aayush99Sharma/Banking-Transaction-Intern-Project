@@ -53,6 +53,7 @@
                 max-width: 100%;
                 height: auto;
                 margin: 0 auto;
+                border-radius: 0; /* Remove border-radius for smaller screens */
             }
 
             /* Adjust text styles */
@@ -62,17 +63,30 @@
 
             /* Adjust font size for headings */
             h1 {
-                font-size: 2rem;
+                font-size: 2rem; /* Reduce font size for smaller screens */
             }
 
             p {
-                font-size: 1rem;
+                font-size: 1rem; /* Reduce font size for smaller screens */
             }
 
             /* Center the CTA button */
             .cta-button {
                 display: block;
                 margin: 10px auto;
+            }
+
+            /* Reduce padding for body section */
+            #body {
+                padding: 20px 0;
+            }
+        }
+
+        /* Additional CSS for mobile responsiveness */
+        @media (max-width: 576px) {
+            /* Further reduce font size for headings */
+            h1 {
+                font-size: 1.5rem;
             }
         }
     </style>
