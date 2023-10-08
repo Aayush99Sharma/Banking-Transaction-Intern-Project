@@ -195,7 +195,7 @@
                     </div>
                     <div class="contact-item" style="margin-bottom: 20px;">
                         <img src="assets/email.png" alt="Email" style="width: 30px; height: 30px; margin-right: 10px;">
-                        <p style="font-size: 1rem; margin: 0;">Email:</p>
+                        <p style="font-size: 1rem; margin: 0;">Email: ayyush00sharma@gmail.com</p>
                     </div>
                     <div class="contact-item">
                         <img src="assets/contact.png" alt="Phone" style="width: 30px; height: 30px; margin-right: 10px;">
@@ -205,13 +205,15 @@
                 <form id="emailForm" style="margin-top: 30px;">
                     <!-- Add a container for the email input to control its width -->
                     <div style="max-width: 400px; margin: 0 auto;">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" style="width: 100%;" required><br><br>
+                        <label for="senderEmail">Your Email:</label>
+                        <input type="email" id="senderEmail" name="senderEmail" style="width: 100%;" required><br><br>
                     </div>
 
                     <!-- Add a new input for the subject -->
-                    <label for="subject">Subject:</label>
-                    <input type="text" id="subject" name="subject" style="width: 100%;" required><br><br>
+                    <div style="max-width: 400px; margin: 0 auto;">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" style="width: 100%;" required><br><br>
+                    </div>
 
                     <!-- Add a container for the description textarea to control its width -->
                     <div style="max-width: 400px; margin: 0 auto;">
@@ -240,15 +242,16 @@
             event.preventDefault();
 
             // Get the values from the form
-            const email = document.getElementById("email").value;
-            const subject = document.getElementById("subject").value; // Get the subject
+            const senderEmail = document.getElementById("senderEmail").value;
+            const subject = document.getElementById("subject").value;
             const description = document.getElementById("description").value;
 
-            // Define the parameters to send to EmailJS
+            // Define the parameters to send to EmailJS, including senderEmail
             const params = {
                 to_email: "ayyush00sharma@gmail.com",
-                subject: subject, // Use the subject entered by the user
-                message: description // This is the email body
+                from_email: senderEmail, // Include the sender's email address
+                subject: subject,
+                message: description
             };
 
             emailjs.send("service_vbxwcax", "template_u3f81is", params)
